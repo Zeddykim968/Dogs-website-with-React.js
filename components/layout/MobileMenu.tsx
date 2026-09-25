@@ -46,7 +46,7 @@ export default function MobileMenu({
         ))}
 
         <a
-          href={`https://wa.me/${SITE_CONFIG.whatsappNumber}`}
+          href={`https://wa.me/${SITE_CONFIG.whatsAppNumber}`}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 rounded-full bg-[#6b4f35] px-6 py-4 text-center font-semibold text-white"
