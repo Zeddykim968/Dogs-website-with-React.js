@@ -1,7 +1,11 @@
-import Hero from "@/components/home/Hero";
-import FeaturedPuppies from "@/components/home/FeaturedPuppies";
-import PopularBreeds from "@/components/home/PopularBreeds";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
+import Hero from "@/home/Hero";
+import FeaturedPuppies from "@/home/FeaturedPuppies";
+import PopularBreeds from "@/home/PopularBreeds";
+import WhyChooseUs from "@/home/WhyChooseUs";
+import HowItWorks from "@/home/HowItWorks";
+import Testimonials from "@/home/Testimonials";
+import InstagramSection from "@/home/InstagramSection";
+import FinalCTA from "@/home/FinalCTA";
 
 export default function HomePage() {
   return (
@@ -13,6 +17,14 @@ export default function HomePage() {
       <PopularBreeds />
 
       <WhyChooseUs />
+
+      <HowItWorks />
+
+      <Testimonials />
+
+      <FinalCTA />
+
+      <InstagramSection />
     </>
   );
 }

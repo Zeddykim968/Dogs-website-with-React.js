@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
     name: "Puppy Paradise",
     description: "A delightful haven for puppy lovers, offering a wide range of adorable puppies for adoption and care tips.",
-    whatsAppNumber: "254711261654",
+    whatsappNumber: "254711261654",
     email: "zedrick136@gmail.com",
 };
 
