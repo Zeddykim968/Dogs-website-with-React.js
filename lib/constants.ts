@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
     description: "A delightful haven for puppy lovers, offering a wide range of adorable puppies for adoption and care tips.",
     whatsappNumber: "254711261654",
     email: "zedrick136@gmail.com",
-    instragramUrl: "https://www.instagram.com/puppyparadise/",
+    instagramUrl: "https://www.instagram.com/puppyparadise/",
 };
 
 

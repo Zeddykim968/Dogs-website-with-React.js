@@ -1,6 +1,7 @@
 "use client";
 
 import { Search, SlidersHorizontal } from "lucide-react";
+import { breeds } from "@/lib/data/breeds";
 
 interface PuppyFiltersProps {
   search: string;
@@ -57,12 +58,11 @@ export default function PuppyFilters({
           className="rounded-2xl border border-[#e5dfd7] bg-[#faf9f6] px-4 py-3 text-sm text-[#4b5563] outline-none focus:border-[#8b6f47]"
         >
           <option value="all">All breeds</option>
-          <option value="german-shepherd">German Shepherd</option>
-          <option value="golden-retriever">Golden Retriever</option>
-          <option value="french-bulldog">French Bulldog</option>
-          <option value="rottweiler">Rottweiler</option>
-          <option value="labrador-retriever">Labrador Retriever</option>
-          <option value="beagle">Beagle</option>
+          {breeds.map((breed) => (
+            <option key={breed.slug} value={breed.slug}>
+              {breed.name}
+            </option>
+          ))}
         </select>
 
         {/* Gender */}

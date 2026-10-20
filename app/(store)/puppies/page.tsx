@@ -1,13 +1,29 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { use, useMemo, useState } from "react";
 import PuppyGrid from "@/components/puppies/PuppyGrid";
 import PuppyFilters from "@/components/puppies/PuppyFilters";
 import { puppies } from "@/lib/data/puppies";
+import { breeds } from "@/lib/data/breeds";
 
-export default function PuppiesPage() {
+interface PuppiesPageProps {
+  searchParams: Promise<{
+    [key: string]: string | string[] | undefined;
+  }>;
+}
+
+export default function PuppiesPage({ searchParams }: PuppiesPageProps) {
+  const params = use(searchParams);
+
+  const requestedBreed =
+    typeof params.breed === "string" ? params.breed : "all";
+
+  const initialBreed = breeds.some((item) => item.slug === requestedBreed)
+    ? requestedBreed
+    : "all";
+
   const [search, setSearch] = useState("");
-  const [breed, setBreed] = useState("all");
+  const [breed, setBreed] = useState(initialBreed);
   const [gender, setGender] = useState("all");
   const [availability, setAvailability] = useState("all");
 

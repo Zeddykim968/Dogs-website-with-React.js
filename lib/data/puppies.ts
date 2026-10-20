@@ -12,6 +12,7 @@ export type Puppy = {
   ageInMonths: number;
   price: number;
   status: PuppyStatus;
+  featured: boolean;
   location: string;
   image: string;
   images: string[];
@@ -32,6 +33,7 @@ export const puppies: Puppy[] = [
     ageInMonths: 4,
     price: 65000,
     status: "Available",
+    featured: true,
     location: "Nairobi",
     image:
       "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?q=80&w=1200&auto=format&fit=crop",
@@ -57,6 +59,7 @@ export const puppies: Puppy[] = [
     ageInMonths: 3,
     price: 75000,
     status: "Available",
+    featured: true,
     location: "Nairobi",
     image:
       "https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1200&auto=format&fit=crop",
@@ -82,6 +85,7 @@ export const puppies: Puppy[] = [
     ageInMonths: 3,
     price: 90000,
     status: "Available",
+    featured: true,
     location: "Kiambu",
     image:
       "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200&auto=format&fit=crop",
@@ -106,6 +110,7 @@ export const puppies: Puppy[] = [
     ageInMonths: 5,
     price: 70000,
     status: "Available",
+    featured: true,
     location: "Nairobi",
     image:
       "https://images.unsplash.com/photo-1567752881298-894bb81f9379?q=80&w=1200&auto=format&fit=crop",
@@ -130,6 +135,7 @@ export const puppies: Puppy[] = [
     ageInMonths: 4,
     price: 60000,
     status: "Reserved",
+    featured: false,
     location: "Nairobi",
     image:
       "https://images.unsplash.com/photo-1591769225440-811ad7d6eab2?q=80&w=1200&auto=format&fit=crop",
@@ -153,6 +159,7 @@ export const puppies: Puppy[] = [
     ageInMonths: 4,
     price: 55000,
     status: "Available",
+    featured: false,
     location: "Nakuru",
     image:
       "https://images.unsplash.com/photo-1505628346881-b72b27e84530?q=80&w=1200&auto=format&fit=crop",

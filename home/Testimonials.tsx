@@ -73,7 +73,7 @@ export default function Testimonials() {
 
               {/* Testimonial */}
               <p className="mt-5 text-base leading-7 text-[#4b5563]">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
 
               {/* Customer */}

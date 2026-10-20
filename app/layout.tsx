@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Puppy Haven | Find Your Perfect Companion",
+  title: {
+    default: `${SITE_CONFIG.name} | Find Your Perfect Companion`,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
   description:
     "Discover healthy and happy puppies looking for their new homes.",
 };

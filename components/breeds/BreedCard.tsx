@@ -3,13 +3,18 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import type { Breed } from "@/lib/data/breeds";
+import {
+  getBreedAvailableCount,
+  type Breed,
+} from "@/lib/data/breeds";
 
 interface BreedCardProps {
   breed: Breed;
 }
 
 export default function BreedCard({ breed }: BreedCardProps) {
+  const availableCount = getBreedAvailableCount(breed.slug);
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -32,7 +37,9 @@ export default function BreedCard({ breed }: BreedCardProps) {
             <div className="flex items-end justify-between gap-4">
               <div>
                 <p className="mb-2 text-sm font-medium text-white/75">
-                  {breed.puppyCount} puppies available
+                  {availableCount > 0
+                    ? `${availableCount} ${availableCount === 1 ? "puppy" : "puppies"} available`
+                    : "Ask about this breed"}
                 </p>
 
                 <h3 className="text-2xl font-bold">
