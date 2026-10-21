@@ -4,7 +4,7 @@ import PopularBreeds from "@/home/PopularBreeds";
 import WhyChooseUs from "@/home/WhyChooseUs";
 import HowItWorks from "@/home/HowItWorks";
 import Testimonials from "@/home/Testimonials";
-import InstagramSection from "@/home/InstagramSection";
+import FacebookSection from "@/home/FacebookSection";
 import FinalCTA from "@/home/FinalCTA";
 
 export default function HomePage() {
@@ -24,7 +24,7 @@ export default function HomePage() {
 
       <FinalCTA />
 
-      <InstagramSection />
+      <FacebookSection />
     </>
   );
 }

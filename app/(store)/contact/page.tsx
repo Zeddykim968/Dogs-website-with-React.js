@@ -1,29 +1,25 @@
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { FaFacebookF } from "react-icons/fa";
 
 import ContactForm from "@/components/contact/ContactForm";
 import { SITE_CONFIG } from "@/lib/constants";
 
+
 type ChannelIcon = ComponentType<{ size?: number }>;
 
-function InstagramIcon({ size = 22 }: { size?: number }) {
+function FacebookIcon({ size = 22 }: { size?: number }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill="currentColor"
       aria-hidden="true"
     >
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+      <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.438H7.078v-3.49h3.047V9.412c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.956.93-1.956 1.884v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073Z" />
     </svg>
   );
 }
@@ -56,11 +52,11 @@ const channels: Array<{
     icon: Mail,
   },
   {
-    title: "Instagram",
+    title: "Facebook",
     description: "Puppy updates, new arrivals and happy family stories.",
-    href: SITE_CONFIG.instagramUrl,
+    href: SITE_CONFIG.facebookUrl,
     value: "@puppyparadise",
-    icon: InstagramIcon,
+    icon: FacebookIcon,
   },
   {
     title: "Location",

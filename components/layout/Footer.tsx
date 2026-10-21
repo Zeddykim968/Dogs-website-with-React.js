@@ -46,12 +46,12 @@ export default function Footer() {
             </h3>
 
             <a
-              href={SITE_CONFIG.instagramUrl}
+              href={SITE_CONFIG.facebookUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-sm text-[#6b7280] transition-colors hover:text-[#6b4f35]"
             >
-              {/* Instagram icon */}
+              {/* Facebook icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"

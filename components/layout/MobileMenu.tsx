@@ -19,7 +19,7 @@ export default function MobileMenu({
 
   return (
     <div className="fixed inset-0 z-[100] bg-[#faf9f6] md:hidden">
-      <div className="flex h-20 items-center justify-between border-b border-[#e5e1da] px-6">
+      <div className="flex h-10 items-center justify-between border-b border-[#e5e1da] px-6">
         <span className="text-xl font-bold text-[#4d3827]">
           {SITE_CONFIG.name}
         </span>
