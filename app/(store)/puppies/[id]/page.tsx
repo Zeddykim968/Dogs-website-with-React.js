@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 
@@ -6,7 +7,10 @@ import PuppyGallery from "@/components/puppies/PuppyGallery";
 import PuppyInfo from "@/components/puppies/PuppyInfo";
 import PuppyContact from "@/components/puppies/PuppyContact";
 
-import { puppies } from "@/lib/data/puppies";
+import { getPuppyById } from "@/lib/data/queries";
+import { SITE_CONFIG } from "@/lib/constants";
+
+export const dynamic = "force-dynamic";
 
 interface PuppyDetailsPageProps {
   params: Promise<{
@@ -14,12 +18,31 @@ interface PuppyDetailsPageProps {
   }>;
 }
 
+export async function generateMetadata({
+  params,
+}: PuppyDetailsPageProps): Promise<Metadata> {
+  const { id } = await params;
+
+  const puppy = await getPuppyById(id);
+
+  if (!puppy) {
+    return {
+      title: "Puppy not found",
+    };
+  }
+
+  return {
+    title: `Meet ${puppy.name}`,
+    description: `${puppy.description} ${puppy.breed} puppy at ${SITE_CONFIG.name}.`,
+  };
+}
+
 export default async function PuppyDetailsPage({
   params,
 }: PuppyDetailsPageProps) {
   const { id } = await params;
 
-  const puppy = puppies.find((item) => item.id === id);
+  const puppy = await getPuppyById(id);
 
   if (!puppy) {
     notFound();

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import SiteChrome from "@/components/layout/SiteChrome";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
@@ -21,11 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-
-        <main>{children}</main>
-
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

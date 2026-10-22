@@ -7,6 +7,8 @@ import Testimonials from "@/home/Testimonials";
 import FacebookSection from "@/home/FacebookSection";
 import FinalCTA from "@/home/FinalCTA";
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   return (
     <>

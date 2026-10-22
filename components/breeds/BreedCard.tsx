@@ -3,17 +3,17 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import {
-  getBreedAvailableCount,
-  type Breed,
-} from "@/lib/data/breeds";
+import type { Breed } from "@/lib/data/breeds";
 
 interface BreedCardProps {
   breed: Breed;
+  availableCount: number;
 }
 
-export default function BreedCard({ breed }: BreedCardProps) {
-  const availableCount = getBreedAvailableCount(breed.slug);
+export default function BreedCard({
+  breed,
+  availableCount,
+}: BreedCardProps) {
 
   return (
     <motion.article

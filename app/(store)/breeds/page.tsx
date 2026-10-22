@@ -3,8 +3,10 @@ import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
 import BreedGrid from "@/components/breeds/BreedGrid";
-import { breeds } from "@/lib/data/breeds";
+import { getBreeds } from "@/lib/data/queries";
 import { SITE_CONFIG } from "@/lib/constants";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Breeds",
@@ -12,7 +14,9 @@ export const metadata: Metadata = {
     "Explore the dog breeds available at Puppy Paradise and find a companion whose personality fits your lifestyle.",
 };
 
-export default function BreedsPage() {
+export default async function BreedsPage() {
+  const breeds = await getBreeds();
+
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       {/* Header */}

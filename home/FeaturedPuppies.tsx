@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import PuppyGrid from "@/components/puppies/PuppyGrid";
-import { puppies } from "@/lib/data/puppies";
+import { getFeaturedPuppies } from "@/lib/data/queries";
 
-export default function FeaturedPuppies() {
-  const featuredPuppies = puppies.filter(
-    (puppy) => puppy.featured && puppy.status === "Available",
-  );
+export default async function FeaturedPuppies() {
+  const featuredPuppies = (await getFeaturedPuppies()).slice(0, 3);
 
   return (
     <section className="bg-white py-24">
@@ -39,7 +37,7 @@ export default function FeaturedPuppies() {
 
         {/* Puppy cards */}
         <div className="mt-12">
-          <PuppyGrid puppies={featuredPuppies.slice(0, 3)} />
+          <PuppyGrid puppies={featuredPuppies} />
         </div>
       </div>
     </section>

@@ -1,13 +1,14 @@
 "use client";
 
 import { Search, SlidersHorizontal } from "lucide-react";
-import { breeds } from "@/lib/data/breeds";
+import type { Breed } from "@/lib/data/breeds";
 
 interface PuppyFiltersProps {
   search: string;
   breed: string;
   gender: string;
   availability: string;
+  breeds: Breed[];
   onSearchChange: (value: string) => void;
   onBreedChange: (value: string) => void;
   onGenderChange: (value: string) => void;
@@ -23,6 +24,7 @@ export default function PuppyFilters({
   onBreedChange,
   onGenderChange,
   onAvailabilityChange,
+  breeds,
 }: PuppyFiltersProps) {
   return (
     <div className="rounded-3xl border border-[#e8e2da] bg-white p-5 shadow-sm">

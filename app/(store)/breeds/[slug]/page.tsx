@@ -8,10 +8,12 @@ import PuppyGrid from "@/components/puppies/PuppyGrid";
 import FinalCTA from "@/home/FinalCTA";
 import { SITE_CONFIG } from "@/lib/constants";
 import {
-  breeds,
-  getBreedAvailableCount,
+  getBreedBySlug,
   getBreedPuppies,
-} from "@/lib/data/breeds";
+  getBreeds,
+} from "@/lib/data/queries";
+
+export const dynamic = "force-dynamic";
 
 interface BreedDetailsPageProps {
   params: Promise<{
@@ -24,7 +26,7 @@ export async function generateMetadata({
 }: BreedDetailsPageProps): Promise<Metadata> {
   const { slug } = await params;
 
-  const breed = breeds.find((item) => item.slug === slug);
+  const breed = await getBreedBySlug(slug);
 
   if (!breed) {
     return {
@@ -43,16 +45,20 @@ export default async function BreedDetailsPage({
 }: BreedDetailsPageProps) {
   const { slug } = await params;
 
-  const breed = breeds.find((item) => item.slug === slug);
+  const breed = await getBreedBySlug(slug);
 
   if (!breed) {
     notFound();
   }
 
-  const breedPuppies = getBreedPuppies(breed.slug);
-  const availableCount = getBreedAvailableCount(breed.slug);
+  const breedPuppies = await getBreedPuppies(breed.slug);
+  const availableCount = breedPuppies.filter(
+    (puppy) => puppy.status === "Available",
+  ).length;
   const listedCount = breedPuppies.length;
-  const otherBreeds = breeds.filter((item) => item.slug !== breed.slug);
+  const otherBreeds = (await getBreeds()).filter(
+    (item) => item.slug !== breed.slug,
+  );
 
   const availabilityLabel =
     availableCount > 0

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import BreedGrid from "@/components/breeds/BreedGrid";
-import { breeds } from "@/lib/data/breeds";
+import { getBreeds } from "@/lib/data/queries";
 
-export default function PopularBreeds() {
+export default async function PopularBreeds() {
+  const breeds = await getBreeds();
   return (
     <section className="bg-[#faf9f6] py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
