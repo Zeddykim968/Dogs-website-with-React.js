@@ -76,7 +76,7 @@ export default async function BreedDetailsPage({
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       {/* Hero */}
-      <section className="bg-[#4d3827] px-6 pb-16 pt-32 text-white lg:px-8">
+      <section className="bg-[#4d3827] px-6 pb-12 pt-24 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Link
             href="/breeds"
@@ -86,17 +86,17 @@ export default async function BreedDetailsPage({
             Back to breeds
           </Link>
 
-          <div className="mt-10 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="mt-8 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d9c2a6]">
                 Breed Profile
               </p>
 
-              <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+              <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
                 {breed.name}
               </h1>
 
-              <p className="mt-5 max-w-xl text-lg leading-8 text-white/70">
+              <p className="mt-4 max-w-xl text-base leading-7 text-white/70">
                 {breed.description}
               </p>
 
@@ -114,10 +114,10 @@ export default async function BreedDetailsPage({
                 </span>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#puppies"
-                  className="rounded-full bg-white px-6 py-3.5 font-semibold text-[#4d3827] transition-all hover:bg-[#f3efe8] hover:shadow-xl"
+                  className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#4d3827] transition-all hover:bg-[#f3efe8] hover:shadow-xl"
                 >
                   View {breed.name} puppies
                 </a>
@@ -126,7 +126,7 @@ export default async function BreedDetailsPage({
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3.5 font-semibold text-white transition-all hover:border-white hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition-all hover:border-white hover:bg-white/10"
                 >
                   <MessageCircle size={18} />
                   Ask About This Breed
@@ -148,7 +148,7 @@ export default async function BreedDetailsPage({
       {/* Puppies of this breed */}
       <section
         id="puppies"
-        className="mx-auto max-w-7xl scroll-mt-28 px-6 py-16 lg:px-8"
+        className="mx-auto max-w-7xl scroll-mt-24 px-6 py-14 lg:px-8"
       >
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
@@ -156,11 +156,11 @@ export default async function BreedDetailsPage({
               Currently In Our Care
             </p>
 
-            <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
               {breed.name} puppies
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-[#6b7280]">
+            <p className="mt-4 text-base leading-7 text-[#6b7280]">
               {listedCount > 0
                 ? `Meet the ${breed.name} puppies currently looking for a home. Each one comes with health records and ongoing support.`
                 : `We do not have any ${breed.name} puppies listed right now, but new litters arrive regularly.`}
@@ -176,7 +176,7 @@ export default async function BreedDetailsPage({
           </Link>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10">
           {listedCount > 0 ? (
             <PuppyGrid puppies={breedPuppies} />
           ) : (
@@ -191,12 +191,12 @@ export default async function BreedDetailsPage({
                 have available today.
               </p>
 
-              <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#6b4f35] px-6 py-3.5 font-semibold text-white transition-all hover:bg-[#4d3827] hover:shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#6b4f35] px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-[#4d3827] hover:shadow-lg"
                 >
                   <MessageCircle size={18} />
                   Join The Waiting List
@@ -204,7 +204,7 @@ export default async function BreedDetailsPage({
 
                 <Link
                   href="/puppies"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#d9c2a6] px-6 py-3.5 font-semibold text-[#4d3827] transition-all hover:bg-[#f3efe8]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#d9c2a6] px-5 py-3 text-sm font-semibold text-[#4d3827] transition-all hover:bg-[#f3efe8]"
                 >
                   Browse All Puppies
                   <ArrowRight size={18} />
@@ -217,7 +217,7 @@ export default async function BreedDetailsPage({
 
       {/* Other breeds */}
       {otherBreeds.length > 0 && (
-        <section className="bg-white py-16">
+        <section className="bg-white py-14">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl">
@@ -225,7 +225,7 @@ export default async function BreedDetailsPage({
                   Keep Exploring
                 </p>
 
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
+                <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
                   Other breeds
                 </h2>
               </div>
@@ -239,7 +239,7 @@ export default async function BreedDetailsPage({
               </Link>
             </div>
 
-            <div className="mt-12">
+            <div className="mt-10">
               <BreedGrid breeds={otherBreeds} />
             </div>
           </div>

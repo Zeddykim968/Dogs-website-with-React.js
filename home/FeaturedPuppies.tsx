@@ -7,7 +7,7 @@ export default async function FeaturedPuppies() {
   const featuredPuppies = (await getFeaturedPuppies()).slice(0, 3);
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -16,11 +16,11 @@ export default async function FeaturedPuppies() {
               Meet Your Match
             </p>
 
-            <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
               Featured puppies
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-[#6b7280]">
+            <p className="mt-4 text-base leading-7 text-[#6b7280]">
               Take a look at some of our adorable puppies who are ready to
               find their new families.
             </p>
@@ -36,7 +36,7 @@ export default async function FeaturedPuppies() {
         </div>
 
         {/* Puppy cards */}
-        <div className="mt-12">
+        <div className="mt-10">
           <PuppyGrid puppies={featuredPuppies} />
         </div>
       </div>

@@ -20,17 +20,17 @@ export default async function BreedsPage() {
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       {/* Header */}
-      <section className="bg-[#4d3827] px-6 pb-16 pt-32 text-white lg:px-8">
+      <section className="bg-[#4d3827] px-6 pb-12 pt-24 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d9c2a6]">
             Find Your Breed
           </p>
 
-          <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
             Our breeds
           </h1>
 
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/70">
             Explore the breeds our families love most and learn which
             companion fits your home, lifestyle and energy.
           </p>
@@ -53,8 +53,8 @@ export default async function BreedsPage() {
       </section>
 
       {/* Help choosing */}
-      <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
-        <div className="rounded-[2rem] bg-[#4d3827] px-8 py-14 text-center text-white md:px-16">
+      <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+        <div className="rounded-[2rem] bg-[#4d3827] px-8 py-10 text-center text-white md:px-16">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d9c2a6]">
             Need Help Choosing?
           </p>
@@ -63,18 +63,18 @@ export default async function BreedsPage() {
             Tell us about your home and we will help you find the right breed
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/70">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/70">
             Every family is different. Share your living space, activity level
             and experience and we will point you towards a companion that
             matches your lifestyle.
           </p>
 
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <a
               href={`https://wa.me/${SITE_CONFIG.whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-[#4d3827] transition-all hover:bg-[#f3efe8] hover:shadow-xl"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#4d3827] transition-all hover:bg-[#f3efe8] hover:shadow-xl"
             >
               <MessageCircle size={18} />
               Chat With Us
@@ -82,7 +82,7 @@ export default async function BreedsPage() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 font-semibold text-white transition-all hover:border-white hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition-all hover:border-white hover:bg-white/10"
             >
               Contact Us
               <ArrowRight size={18} />

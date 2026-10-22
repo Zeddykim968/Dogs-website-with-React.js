@@ -29,9 +29,7 @@ export default function PuppyCard({ puppy }: PuppyCardProps) {
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
 
-          {/* Status */}
-          <div
-            className={`absolute left-4 top-4 rounded-full px-3 py-1.5 text-xs font-semibold ${
+          {/* Status */}          <div className={`absolute left-3 top-3 rounded-full px-2.5 py-1 text-xs font-semibold ${
               isAvailable
                 ? "bg-white text-[#4d3827]"
                 : "bg-black/70 text-white"
@@ -47,10 +45,10 @@ export default function PuppyCard({ puppy }: PuppyCardProps) {
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-5">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h3 className="text-2xl font-bold text-[#1f2937]">
+              <h3 className="text-xl font-bold text-[#1f2937]">
                 {puppy.name}
               </h3>
 
@@ -59,12 +57,12 @@ export default function PuppyCard({ puppy }: PuppyCardProps) {
               </p>
             </div>
 
-            <p className="whitespace-nowrap text-lg font-bold text-[#4d3827]">
+            <p className="whitespace-nowrap text-base font-bold text-[#4d3827]">
               KSh {puppy.price.toLocaleString()}
             </p>
           </div>
 
-          <div className="mt-5 flex items-center gap-4 border-t border-[#eee9e2] pt-4 text-sm text-[#6b7280]">
+          <div className="mt-4 flex items-center gap-4 border-t border-[#eee9e2] pt-3.5 text-sm text-[#6b7280]">
             <span>{puppy.gender}</span>
 
             <span>•</span>

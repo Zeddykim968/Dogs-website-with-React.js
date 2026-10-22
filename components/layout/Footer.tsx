@@ -5,12 +5,12 @@ import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
 export default function Footer() {
   return (
     <footer className="border-t border-[#e5e1da] bg-[#f3efe8]">
-      <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-3">
           
           {/* Brand */}
           <div>
-            <h2 className="text-xl font-bold text-[#4d3827]">
+            <h2 className="text-lg font-bold text-[#4d3827]">
               {SITE_CONFIG.name}
             </h2>
 
@@ -26,7 +26,7 @@ export default function Footer() {
               Explore
             </h3>
 
-            <div className="mt-4 flex flex-col gap-3">
+            <div className="mt-3 flex flex-col gap-2.5">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-[#ddd5ca] pt-6 text-center text-sm text-[#6b7280]">
+        <div className="mt-10 border-t border-[#ddd5ca] pt-5 text-center text-sm text-[#6b7280]">
           © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
         </div>
       </div>

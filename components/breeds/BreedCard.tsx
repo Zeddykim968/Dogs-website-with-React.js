@@ -24,7 +24,7 @@ export default function BreedCard({
       className="group relative overflow-hidden rounded-3xl bg-[#e9e2d9] shadow-sm"
     >
       <Link href={`/breeds/${breed.slug}`} className="block">
-        <div className="relative h-[420px] overflow-hidden">
+        <div className="relative h-[360px] overflow-hidden">
           <img
             src={breed.image}
             alt={breed.name}
@@ -33,16 +33,16 @@ export default function BreedCard({
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
-          <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+          <div className="absolute inset-x-0 bottom-0 p-5 text-white">
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="mb-2 text-sm font-medium text-white/75">
+                <p className="mb-1.5 text-sm font-medium text-white/75">
                   {availableCount > 0
                     ? `${availableCount} ${availableCount === 1 ? "puppy" : "puppies"} available`
                     : "Ask about this breed"}
                 </p>
 
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-xl font-bold">
                   {breed.name}
                 </h3>
 

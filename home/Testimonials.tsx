@@ -23,7 +23,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#f3efe8] py-24">
+    <section className="bg-[#f3efe8] py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
         <div className="mx-auto max-w-3xl text-center">
@@ -31,18 +31,18 @@ export default function Testimonials() {
             Happy Families
           </p>
 
-          <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
             Loved by families
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-[#6b7280]">
+          <p className="mt-4 text-base leading-7 text-[#6b7280]">
             Every puppy begins a new story. Here are a few examples of the
             experiences we want every family to have.
           </p>
         </div>
 
         {/* Testimonials */}
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <motion.article
               key={testimonial.name}
@@ -53,15 +53,15 @@ export default function Testimonials() {
                 duration: 0.5,
                 delay: index * 0.1,
               }}
-              className="relative rounded-3xl border border-[#e5e1da] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+              className="relative rounded-3xl border border-[#e5e1da] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
             >
               {/* Quote icon */}
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#f3efe8] text-[#6b4f35]">
-                <Quote size={20} />
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f3efe8] text-[#6b4f35]">
+                <Quote size={18} />
               </div>
 
               {/* Stars */}
-              <div className="mt-6 flex gap-1">
+              <div className="mt-4 flex gap-1">
                 {Array.from({ length: 5 }).map((_, starIndex) => (
                   <Star
                     key={starIndex}
@@ -72,12 +72,12 @@ export default function Testimonials() {
               </div>
 
               {/* Testimonial */}
-              <p className="mt-5 text-base leading-7 text-[#4b5563]">
+              <p className="mt-4 text-[15px] leading-7 text-[#4b5563]">
                 &ldquo;{testimonial.text}&rdquo;
               </p>
 
               {/* Customer */}
-              <div className="mt-8 border-t border-[#eee9e2] pt-6">
+              <div className="mt-6 border-t border-[#eee9e2] pt-5">
                 <p className="font-semibold text-[#1f2937]">
                   {testimonial.name}
                 </p>

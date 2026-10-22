@@ -29,19 +29,19 @@ export default function PuppyInfo({ puppy }: PuppyInfoProps) {
         </span>
       </div>
 
-      <h1 className="mt-5 text-5xl font-bold tracking-tight text-[#1f2937] md:text-6xl">
+      <h1 className="mt-5 text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
         Meet {puppy.name}
       </h1>
 
-      <p className="mt-5 text-lg leading-8 text-[#6b7280]">
+      <p className="mt-4 text-base leading-7 text-[#6b7280]">
         {puppy.description}
       </p>
 
-      <div className="mt-8 text-3xl font-bold text-[#4d3827]">
+      <div className="mt-7 text-2xl font-bold text-[#4d3827]">
         KSh {puppy.price.toLocaleString()}
       </div>
 
-      <div className="mt-8 grid grid-cols-2 gap-4">
+      <div className="mt-7 grid grid-cols-2 gap-3">
         <div className="rounded-2xl bg-[#faf9f6] p-4">
           <CalendarDays size={19} className="text-[#8b6f47]" />
 
@@ -92,7 +92,7 @@ export default function PuppyInfo({ puppy }: PuppyInfoProps) {
       </div>
 
       {/* Temperament */}
-      <div className="mt-8">
+      <div className="mt-7">
         <h2 className="font-bold text-[#1f2937]">
           Personality
         </h2>

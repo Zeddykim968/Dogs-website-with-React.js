@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto grid min-h-[680px] max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8">
+      <div className="mx-auto grid min-h-[560px] max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-2 lg:px-8">
         
         {/* Text */}
         <motion.div
@@ -19,19 +19,19 @@ export default function Hero() {
             Find Your New Best Friend
           </p>
 
-          <h1 className="max-w-2xl text-5xl font-bold leading-tight tracking-tight text-[#1f2937] md:text-6xl">
+          <h1 className="max-w-2xl text-4xl font-bold leading-tight tracking-tight text-[#1f2937] md:text-5xl">
             A loving companion is waiting for you.
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-[#6b7280]">
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#6b7280]">
             Discover beautiful, healthy and happy puppies ready to become
             part of your family.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-7 flex flex-wrap gap-3">
             <Link
               href="/puppies"
-              className="inline-flex items-center gap-2 rounded-full bg-[#6b4f35] px-6 py-3.5 font-semibold text-white transition-all hover:bg-[#4d3827] hover:shadow-xl"
+              className="inline-flex items-center gap-2 rounded-full bg-[#6b4f35] px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-[#4d3827] hover:shadow-xl"
             >
               Explore Puppies
               <ArrowRight size={18} />
@@ -39,7 +39,7 @@ export default function Hero() {
 
             <Link
               href="/about"
-              className="rounded-full border border-[#d9c2a6] px-6 py-3.5 font-semibold text-[#4d3827] transition-all hover:bg-[#f3efe8]"
+              className="rounded-full border border-[#d9c2a6] px-5 py-3 text-sm font-semibold text-[#4d3827] transition-all hover:bg-[#f3efe8]"
             >
               Learn More
             </Link>
@@ -57,15 +57,15 @@ export default function Hero() {
             <img
               src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1200&auto=format&fit=crop"
               alt="Golden retriever puppy"
-              className="h-[520px] w-full object-cover"
+              className="h-[420px] w-full object-cover"
             />
           </div>
 
-          <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-5 shadow-xl">
+          <div className="absolute -bottom-5 -left-5 rounded-2xl bg-white p-4 shadow-xl">
             <p className="text-sm font-medium text-[#6b7280]">
               Happy families
             </p>
-            <p className="mt-1 text-2xl font-bold text-[#4d3827]">
+            <p className="mt-1 text-xl font-bold text-[#4d3827]">
               100+
             </p>
           </div>

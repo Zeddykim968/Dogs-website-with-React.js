@@ -61,7 +61,7 @@ function FacebookIcon({ size = 20 }: { size?: number }) {
 
 export default function FacebookSection() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Heading */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -76,11 +76,11 @@ export default function FacebookSection() {
               </p>
             </div>
 
-            <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
               Life at {SITE_CONFIG.name}
             </h2>
 
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#6b7280]">
+            <p className="mt-4 max-w-2xl text-base leading-7 text-[#6b7280]">
               Follow us on Facebook for puppy updates, new arrivals,
               behind-the-scenes moments and happy family stories.
             </p>
@@ -90,7 +90,7 @@ export default function FacebookSection() {
             href={SITE_CONFIG.facebookUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-fit items-center gap-2 rounded-full border border-[#1877F2] px-5 py-3 text-sm font-semibold text-[#1877F2] transition-all hover:bg-[#1877F2] hover:text-white"
+            className="inline-flex w-fit items-center gap-2 rounded-full border border-[#1877F2] px-4 py-2 text-[13px] font-semibold text-[#1877F2] transition-all hover:bg-[#1877F2] hover:text-white"
           >
             Visit our Facebook
             <ArrowUpRight size={17} />
@@ -98,7 +98,7 @@ export default function FacebookSection() {
         </div>
 
         {/* Puppy gallery linking to Facebook */}
-        <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
           {facebookPosts.map((post, index) => (
             <motion.a
               key={post.id}

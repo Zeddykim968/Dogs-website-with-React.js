@@ -16,7 +16,7 @@ export default function Navbar() {
 
           <Link
             href="/"
-            className="text-xl font-bold tracking-tight text-[#4d3827]"
+            className="text-base font-bold tracking-tight text-[#4d3827]"
           >
             {SITE_CONFIG.name}
           </Link>
@@ -38,7 +38,7 @@ export default function Navbar() {
               href={`https://wa.me/${SITE_CONFIG.whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-[#6b4f35] px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-[#4d3827] hover:shadow-lg"
+              className="rounded-full bg-[#6b4f35] px-4 py-2 text-[13px] font-semibold text-white transition-all hover:bg-[#4d3827] hover:shadow-lg"
             >
               Chat With Us
             </a>
@@ -47,10 +47,10 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="rounded-lg p-2 text-[#4d3827] transition hover:bg-[#e9e2d9] md:hidden"
+            className="rounded-lg p-1.5 text-[#4d3827] transition hover:bg-[#e9e2d9] md:hidden"
             aria-label="Open menu"
           >
-            <Menu size={24} />
+            <Menu size={22} />
           </button>
         </div>
       </header>

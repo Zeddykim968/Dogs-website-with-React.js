@@ -71,17 +71,17 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       {/* Header */}
-      <section className="bg-[#4d3827] px-6 pb-16 pt-32 text-white lg:px-8">
+      <section className="bg-[#4d3827] px-6 pb-12 pt-24 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d9c2a6]">
             We&rsquo;re Here To Help
           </p>
 
-          <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
             Contact us
           </h1>
 
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/70">
             Have a question about a puppy, want to schedule a visit or need
             support after your puppy arrives home? We are always happy to
             hear from you.
@@ -99,8 +99,8 @@ export default function ContactPage() {
 
               const body = (
                 <>
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f3efe8] text-[#6b4f35]">
-                    <Icon size={22} />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#f3efe8] text-[#6b4f35]">
+                    <Icon size={20} />
                   </div>
 
                   <div className="min-w-0">

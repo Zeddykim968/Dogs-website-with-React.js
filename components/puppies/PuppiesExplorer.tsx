@@ -45,17 +45,17 @@ export default function PuppiesExplorer({
   return (
     <main className="min-h-screen bg-[#faf9f6]">
       {/* Header */}
-      <section className="bg-[#4d3827] px-6 pb-16 pt-32 text-white lg:px-8">
+      <section className="bg-[#4d3827] px-6 pb-12 pt-24 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d9c2a6]">
             Find Your Companion
           </p>
 
-          <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
             Available puppies
           </h1>
 
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/70">
             Explore our puppies and find a companion whose personality, breed
             and energy match your lifestyle.
           </p>
@@ -76,7 +76,7 @@ export default function PuppiesExplorer({
           onAvailabilityChange={setAvailability}
         />
 
-        <div className="mb-6 mt-10">
+        <div className="mb-5 mt-8">
           <p className="text-sm text-[#6b7280]">
             Showing{" "}
             <span className="font-semibold text-[#1f2937]">

@@ -41,7 +41,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
         <div className="mx-auto max-w-3xl text-center">
@@ -49,11 +49,11 @@ export default function HowItWorks() {
             Simple & Straightforward
           </p>
 
-          <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
             How it works
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-[#6b7280]">
+          <p className="mt-4 text-base leading-7 text-[#6b7280]">
             Finding your new companion should feel exciting, not complicated.
             We make the process simple from your first search to the moment
             you bring your puppy home.
@@ -61,11 +61,11 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps */}
-        <div className="relative mt-16">
+        <div className="relative mt-12">
           {/* Connecting line */}
-          <div className="absolute left-[12.5%] right-[12.5%] top-10 hidden h-px bg-[#e5e1da] lg:block" />
+          <div className="absolute left-[12.5%] right-[12.5%] top-8 hidden h-px bg-[#e5e1da] lg:block" />
 
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
 
@@ -82,22 +82,22 @@ export default function HowItWorks() {
                   className="relative text-center"
                 >
                   {/* Icon */}
-                  <div className="relative z-10 mx-auto flex h-20 w-20 items-center justify-center rounded-full border-8 border-white bg-[#f3efe8] text-[#6b4f35] shadow-sm">
-                    <Icon size={26} />
+                  <div className="relative z-10 mx-auto flex h-14 w-14 items-center justify-center rounded-full border-4 border-white bg-[#f3efe8] text-[#6b4f35] shadow-sm">
+                    <Icon size={22} />
                   </div>
 
                   {/* Number */}
-                  <p className="mt-6 text-xs font-bold tracking-[0.2em] text-[#a18a6d]">
+                  <p className="mt-5 text-xs font-bold tracking-[0.2em] text-[#a18a6d]">
                     STEP {step.number}
                   </p>
 
                   {/* Title */}
-                  <h3 className="mt-3 text-xl font-bold text-[#1f2937]">
+                  <h3 className="mt-2 text-lg font-bold text-[#1f2937]">
                     {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-3 text-sm leading-7 text-[#6b7280]">
+                  <p className="mt-2 text-sm leading-6 text-[#6b7280]">
                     {step.description}
                   </p>
                 </motion.div>

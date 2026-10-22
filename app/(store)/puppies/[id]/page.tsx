@@ -50,18 +50,18 @@ export default async function PuppyDetailsPage({
 
   return (
     <main className="min-h-screen bg-[#faf9f6]">
-      <section className="mx-auto max-w-7xl px-6 pb-24 pt-32 lg:px-8">
+      <section className="mx-auto max-w-7xl px-6 pb-16 pt-24 lg:px-8">
         {/* Back */}
         <Link
           href="/puppies"
-          className="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-[#6b4f35] transition hover:gap-3"
+          className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-[#6b4f35] transition hover:gap-3"
         >
           <ArrowLeft size={17} />
           Back to puppies
         </Link>
 
         {/* Main content */}
-        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <PuppyGallery puppy={puppy} />
 
           <div>
